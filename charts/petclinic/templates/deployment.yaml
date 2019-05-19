@@ -35,6 +35,13 @@ spec:
             httpGet:
               path: /
               port: http
+          env:
+          - name: SPRING_DATASOURCE_URL
+            value: {{ .Values.datasource.url }}
+          - name: SPRING_DATASOURCE_USERNAME
+            value: {{ .Values.datasource.username }}
+          - name: SPRING_DATASOURCE_PASSWORD
+            value: {{ .Values.datasource.password }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
