@@ -1,6 +1,6 @@
 # Using helm to install petclinic
 
-An example [helm](https://helm.sh/) chart is included that will install this application. The mysql database is set through the spring profile argument to CMD in the Dockerfile so before deploying the application using helm, a copy of mysql needs to running with the service name of `mysql-mydb` exposed in the cluster. Note: the mysql db chart init container needs to run as root, so if you are using a system with pod security policies, the namespace for the deployment needs to allow pods with this priviledge. For IBM Cloud private, the minimum namespace pod-security policy needed is `ibm-anyund-psp`.
+An example [helm](https://helm.sh/) chart is included that will install this application. The mysql database is set through the spring profile argument to CMD in the Dockerfile so before deploying the application using helm, a copy of mysql needs to running with the service name of `mysql-mydb` exposed in the cluster. Note: the mysql db chart init container needs to run as root, so if you are using a system with pod security policies, the namespace for the deployment needs to allow pods with this priviledge. For IBM Cloud private, the minimum namespace pod-security policy needed is `ibm-anyuid-psp`.
 
 ## Installing
 
